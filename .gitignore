@@ -58,3 +58,5 @@ coverage/
 #zip ignore
 *.zip
 
+#틀정파일 제외
+/shop/src/test/java/com/shop/config/JasyptEncryptorTest.java
