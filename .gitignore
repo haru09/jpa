@@ -1,0 +1,60 @@
+# ======================
+# 📦 Java & Gradle 기본
+# ======================
+
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+
+# Gradle 빌드 출력
+.gradle/
+build/
+
+# Gradle Wrapper 로그
+gradle-app.setting
+
+# IDE 설정
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ================
+# 🖥 OS 별 무시 항목
+# ================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# ===============
+# 🔐 보안/환경 파일
+# ===============
+
+.env
+*.key
+*.pem
+
+# ===================
+# 🧪 테스트/임시 파일
+# ===================
+
+test-output/
+coverage/
+*.swp
+*.swo
+
+#zip ignore
+*.zip
+
