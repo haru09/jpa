@@ -23,6 +23,37 @@ gradle-app.setting
 *.iws
 out/
 
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
 # ================
 # 🖥 OS 별 무시 항목
 # ================
@@ -60,3 +91,10 @@ coverage/
 
 #틀정파일 제외
 /shop/src/test/java/com/shop/config/JasyptEncryptorTest.java
+
+### resources 디렉토리 내의 application.yml 파일만 무시 (커밋 대상에서 제외) ###
+/shop/src/main/resources/application.yml
+
+
+
+
