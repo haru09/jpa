@@ -1,0 +1,24 @@
+<!-- navigation_menu.html (Bootstrap 네비게이션 바 적용) -->
+<nav th:fragment="menu" class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">SHOP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">홈</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mypage">마이페이지</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/products">상품목록</a>
+        </li>
+        <!-- 필요한 다른 메뉴들 ... -->
+      </ul>
+    </div>
+  </div>
+</nav>
