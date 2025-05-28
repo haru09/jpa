@@ -1,4 +1,4 @@
-package com.shop.controller.user;
+package com.shop.user.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.shop.dto.user.UserSignUpDto;
-import com.shop.service.UserService;
+import com.shop.user.dto.UserSignUpDto;
+import com.shop.user.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 

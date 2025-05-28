@@ -1,8 +1,8 @@
-package com.shop.service;
+package com.shop.user.service;
 
-import com.shop.dto.user.UserSignUpDto;
-import com.shop.entity.User;
-import com.shop.repository.UserRepository;
+import com.shop.user.dto.UserSignUpDto;
+import com.shop.user.entity.User;
+import com.shop.user.repository.UserRepository;
 import com.shop.util.PasswordValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

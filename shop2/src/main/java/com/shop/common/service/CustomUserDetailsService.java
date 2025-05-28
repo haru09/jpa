@@ -1,12 +1,12 @@
-package com.shop.service;
+package com.shop.common.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.shop.entity.User;
-import com.shop.repository.UserRepository;
+import com.shop.user.entity.User;
+import com.shop.user.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

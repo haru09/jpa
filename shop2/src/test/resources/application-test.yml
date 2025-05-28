@@ -1,41 +1,44 @@
 spring:
+
+  config:
+    activate:
+      on-profile: test
+
   datasource:  # 데이터베이스 연결 설정.
     url: jdbc:h2:mem:testdb
     username: sa
     password:
     driver-class-name: org.h2.Driver
+
   jpa:
     show-sql: true    # 콘솔에 실제 실행되는 SQL 쿼리문을 보여줄지 여부. (개발 중 디버깅에 유용)
     hibernate:
-      ddl-auto: update                        # 엔티티 클래스 변경사항을 DB 테이블에 자동 반영 (데이터는 보존)
+      ddl-auto: create-drop
         # DB 테이블 생성/업데이트 전략. (none/create/update/create-drop 등 중 선택)
         # update: 어플리케이션 실행 시 엔티티 변경사항이 자동으로 DB 테이블에 반영, 데이터는 보존
         # create: 실행 시마다 테이블 다시 생성, 기존 데이터 삭제됨
         # create-drop: 실행 시 생성, 애플리케이션 종료 시 삭제
       # none: 자동 반영 없음
     properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
       hibernate:
         format_sql: true     # 콘솔에 출력된 SQL 로그를 보기 좋게 정렬.
+
   h2:
     console:
       enabled: true  # 웹 브라우저에서 H2 데이터베이스를 직접 조회할 수 있는 콘솔 활성화 (보통 http://localhost:8080/h2-console)
 
-  thymeleaf:
-    cache: false    # 템플릿 캐싱 비활성화 (개발 환경에서 바로 반영 내용 확인 가능)
-
   sql:
     init:
       encoding: UTF-8    # SQL 초기화 파일(예: schema.sql, data.sql) 인코딩을 UTF-8로 지정
-
-server:
-  port: 8080
 
 logging:
   level:
     root: INFO
     org.springframework.web: DEBUG          # Spring Web 모듈의 로그를 DEBUG 레벨로 출력
     org.hibernate.SQL: DEBUG                # 하이버네이트에서 생성되는 SQL 로그를 DEBUG 레벨로 출력
-    org.hibernate.orm.jdbc.bind: TRACE      # ✅ Hibernate 6.x용 바인딩 출력
+    org.hibernate.orm.jdbc.bind: TRACE  # ✅ Hibernate 6.x용 바인딩 출력
+    org.hibernate.type.descriptor.sql.basicBinder: TRACE # SQL 파라미터 바인딩 값까지 TRACE 레벨(가장 상세하게)로 출력
     org:
       hibernate:
         SQL: debug

@@ -1,7 +1,7 @@
-package com.shop.service.mypage;
+package com.shop.user.service;
 
-import com.shop.entity.User;
-import com.shop.repository.UserRepository;
+import com.shop.user.entity.User;
+import com.shop.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
